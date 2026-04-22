@@ -1,0 +1,148 @@
+# ================================================================
+#  Decap CMS Configuration — ICAR-IARI Assam
+#  NO OAuth server needed — uses GitHub PKCE (direct login)
+#  Admin panel: https://YOUR-USERNAME.github.io/icar-iari-assam-website/admin/
+# ================================================================
+
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/icar-iari-assam-website  # ← ONLY change this line
+  branch: main
+  auth_type: pkce         # Direct GitHub login — no proxy server required
+  app_id: icar-iari-assam
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - name: "general"
+        label: "Contact & Organisation Info"
+        file: "public/data/settings.json"
+        format: json
+        fields:
+          - { label: "Organisation Full Name", name: "fullName", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Full Postal Address", name: "address", widget: "text" }
+          - { label: "Google Maps Link", name: "mapLink", widget: "string" }
+
+  - name: "home"
+    label: "🏠 Home Page"
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "public/data/home.json"
+        format: json
+        fields:
+          - label: "Statistics (4 counter boxes)"
+            name: "stats"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Value", name: "value", widget: "string", hint: "e.g. 587 or 50+" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "News & Highlights"
+            name: "news"
+            widget: "list"
+            fields:
+              - { label: "Headline", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "string", required: false }
+              - { label: "Link (use # if none)", name: "href", widget: "string", default: "#" }
+
+  - name: "team"
+    label: "👨‍🔬 Scientists & Staff"
+    folder: "public/data/team"
+    create: true
+    slug: "{{order}}-{{slug}}"
+    identifier_field: "name"
+    format: json
+    fields:
+      - { label: "Full Name (with Dr./Shri/Smt)", name: "name", widget: "string" }
+      - label: "Designation"
+        name: "designation"
+        widget: "select"
+        options:
+          - "Director"
+          - "Head of Division"
+          - "Principal Scientist"
+          - "Senior Scientist"
+          - "Scientist"
+          - "Technical Officer"
+          - "Senior Technical Assistant"
+          - "Administrative Officer"
+          - "Accounts Officer"
+      - { label: "Discipline / Specialisation", name: "discipline", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Expertise (comma-separated)", name: "expertise", widget: "string" }
+      - { label: "ResearchGate URL", name: "researchgate", widget: "string", required: false }
+      - { label: "Google Scholar URL", name: "scholar", widget: "string", required: false }
+      - { label: "Display Order (1 = first)", name: "order", widget: "number", default: 10 }
+
+  - name: "notices"
+    label: "📋 Notice Board"
+    folder: "public/data/notices"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: "title"
+    format: json
+    fields:
+      - { label: "Notice Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Recruitment", "Tender", "Circular", "Internship", "Training", "General"]
+      - { label: "Notice Details", name: "body", widget: "text" }
+      - { label: "Attachment (PDF)", name: "attachment", widget: "file", required: false }
+
+  - name: "publications"
+    label: "📄 Publications"
+    folder: "public/data/publications"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    identifier_field: "title"
+    format: json
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Authors", name: "authors", widget: "string" }
+      - { label: "Journal / Book / Bulletin Name", name: "journal", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options:
+          - "Journal Article"
+          - "Book Chapter"
+          - "Technical Bulletin"
+          - "Conference Paper"
+          - "Newsletter"
+          - "Popular Article"
+      - { label: "DOI or URL", name: "doi", widget: "string", required: false }
+      - { label: "Volume/Issue/Pages", name: "pages", widget: "string", required: false }
+
+  - name: "gallery"
+    label: "📸 Photo Gallery"
+    folder: "public/data/gallery"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "caption"
+    format: json
+    fields:
+      - { label: "Upload Photo", name: "image", widget: "image" }
+      - { label: "Caption", name: "caption", widget: "string" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Campus"
+          - "Research"
+          - "Events"
+          - "Outreach"
+          - "Training"
+          - "Farmer Programmes"
+      - { label: "Date of Event/Photo", name: "date", widget: "string", required: false }

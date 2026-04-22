@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">ICAR-IARI Assam | Home</title>
+  <meta name="description" content="Official website of ICAR-Indian Agricultural Research Institute, Assam">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   ICAR-IARI ASSAM  —  Authentic Institutional Style
+   Matching IARI Jharkhand / official ICAR template
+   ═══════════════════════════════════════════════════════ */
+:root {
+  --icar-green:  #1a5c2a;
+  --icar-green2: #237a38;
+  --icar-green3: #2d9648;
+  --icar-orange: #e65100;
+  --icar-orange2:#f57c00;
+  --icar-blue:   #01579b;
+  --icar-gold:   #f9a825;
+  --nav-bg:      #1a5c2a;
+  --nav-hover:   #145020;
+  --ticker-bg:   #237a38;
+  --light-green: #e8f5e9;
+  --border:      #c8e6c9;
+  --text:        #212121;
+  --muted:       #546e7a;
+  --serif:       'Noto Serif', Georgia, serif;
+  --sans:        'Open Sans', Arial, sans-serif;
+  --max:         1200px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); color: var(--text); background: #f5f5f5; font-size: 14px; line-height: 1.6; }
+a { color: var(--icar-blue); text-decoration: none; }
+a:hover { color: var(--icar-orange); text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+/* ── Top utility bar ─────────────────────────────── */
+.top-bar {
+  background: #1a1a1a; color: rgba(255,255,255,.75);
+  font-size: .72rem; padding: 5px 0; letter-spacing: .02em;
+}
+.top-bar-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 16px;
+  display: flex; align-items: center; gap: 16px;
+}
+.top-bar a { color: rgba(255,255,255,.65); font-size: .7rem; }
+.top-bar a:hover { color: #fff; text-decoration: none; }
+.top-bar .sep { opacity: .3; }
+.top-bar .right { margin-left: auto; display: flex; gap: 12px; }
+.top-bar .skip { color: rgba(255,255,255,.4); font-size: .65rem; }
+
+/* ── Header ──────────────────────────────────────── */
+.site-header {
+  background: #fff;
+  border-bottom: 4px solid var(--icar-green);
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+.header-inner {
+  max-width: var(--max); margin: 0 auto; padding: 10px 16px;
+  display: flex; align-items: center; gap: 16px;
+}
+.header-logos { display: flex; align-items: center; gap: 14px; }
+.logo-emblem {
+  width: 80px; height: 80px; flex-shrink: 0;
+  background: var(--icar-green);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 2.2rem;
+  border: 3px solid var(--icar-gold);
+}
+.header-text { flex: 1; }
+.header-text .hindi { font-size: .78rem; color: var(--muted); margin-bottom: 2px; }
+.header-text .org-name {
+  font-family: var(--serif); font-size: 1.45rem; font-weight: 700;
+  color: var(--icar-green); line-height: 1.1; margin-bottom: 2px;
+}
+.header-text .org-full { font-size: .82rem; color: var(--text); font-weight: 600; }
+.header-text .org-sub  { font-size: .75rem; color: var(--icar-orange); font-weight: 600; letter-spacing: .03em; }
+.header-right { text-align: right; flex-shrink: 0; }
+.header-right .icar-logo-text {
+  font-family: var(--serif); font-size: .7rem; color: var(--muted);
+  display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
+}
+.icar-badge {
+  display: inline-block; background: var(--icar-green);
+  color: #fff; font-size: .65rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 3px; letter-spacing: .06em;
+  margin-bottom: 4px;
+}
+
+/* ── Main Navigation ─────────────────────────────── */
+.main-nav { background: var(--nav-bg); position: sticky; top: 0; z-index: 200; }
+.nav-inner {
+  max-width: var(--max); margin: 0 auto;
+  display: flex; align-items: stretch;
+}
+.nav-inner a {
+  color: #fff; font-size: .8rem; font-weight: 600;
+  padding: 12px 16px; display: block;
+  letter-spacing: .02em; white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,.12);
+  transition: background .15s;
+}
+.nav-inner a:hover, .nav-inner a.active {
+  background: var(--nav-hover); text-decoration: none;
+}
+.nav-inner a.active { border-bottom: 3px solid var(--icar-gold); }
+.nav-inner .home-icon { padding: 12px 14px; }
+.hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  color: #fff; font-size: 1.4rem; padding: 10px 16px; margin-left: auto;
+}
+
+/* ── News Ticker ─────────────────────────────────── */
+.ticker-bar {
+  background: var(--ticker-bg); color: #fff;
+  padding: 7px 0; overflow: hidden;
+  display: flex; align-items: center;
+}
+.ticker-label {
+  background: var(--icar-orange); color: #fff;
+  font-size: .72rem; font-weight: 700; padding: 0 14px;
+  white-space: nowrap; letter-spacing: .06em;
+  height: 100%; display: flex; align-items: center;
+  flex-shrink: 0; min-height: 28px;
+}
+.ticker-track { overflow: hidden; flex: 1; }
+.ticker-content {
+  display: inline-block; white-space: nowrap;
+  animation: ticker 35s linear infinite;
+  font-size: .78rem; padding-left: 100%;
+}
+.ticker-content:hover { animation-play-state: paused; }
+.ticker-content a { color: #fff; margin-right: 40px; }
+.ticker-content a::before { content: "◆ "; color: var(--icar-gold); }
+@keyframes ticker { to { transform: translateX(-100%); } }
+
+/* ── Layout containers ───────────────────────────── */
+.page-wrap { max-width: var(--max); margin: 0 auto; padding: 20px 16px; }
+.two-col { display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+.three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.two-equal { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ── Section boxes (the white card panels) ───────── */
+.box {
+  background: #fff; border: 1px solid #ddd;
+  border-radius: 3px; margin-bottom: 16px;
+  overflow: hidden;
+}
+.box-head {
+  background: var(--icar-green); color: #fff;
+  padding: 8px 14px; font-size: .82rem; font-weight: 700;
+  letter-spacing: .04em; display: flex; align-items: center; gap: 8px;
+}
+.box-head .icon { font-size: 1rem; }
+.box-head .view-all {
+  margin-left: auto; font-size: .68rem; color: rgba(255,255,255,.8);
+  font-weight: 400; cursor: pointer;
+}
+.box-head .view-all:hover { color: var(--icar-gold); text-decoration: underline; }
+.box-body { padding: 12px 14px; }
+
+/* ── Hero Slider ─────────────────────────────────── */
+.hero-slider { position: relative; overflow: hidden; background: #000; }
+.slide {
+  position: absolute; inset: 0; opacity: 0;
+  transition: opacity .8s ease;
+}
+.slide.active { opacity: 1; position: relative; }
+.slide img { width: 100%; height: 380px; object-fit: cover; display: block; }
+.slide-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,.72));
+  color: #fff; padding: 32px 20px 14px;
+  font-size: .85rem;
+}
+.slide-caption strong { display: block; font-size: 1rem; margin-bottom: 3px; }
+.slider-dots {
+  position: absolute; bottom: 8px; right: 12px;
+  display: flex; gap: 6px;
+}
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(255,255,255,.5); cursor: pointer; border: none;
+}
+.dot.active { background: var(--icar-gold); }
+.slider-arrows {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 100%; display: flex; justify-content: space-between;
+  padding: 0 8px; pointer-events: none;
+}
+.arrow-btn {
+  pointer-events: all; background: rgba(0,0,0,.45); color: #fff;
+  border: none; cursor: pointer; padding: 8px 12px; font-size: 1rem;
+  border-radius: 2px; transition: background .2s;
+}
+.arrow-btn:hover { background: var(--icar-green); }
+
+/* ── News & Announcements list ───────────────────── */
+.news-list { list-style: none; }
+.news-list li {
+  padding: 8px 0; border-bottom: 1px dashed #ddd;
+  display: flex; gap: 8px; align-items: flex-start;
+  font-size: .82rem; line-height: 1.5;
+}
+.news-list li:last-child { border-bottom: none; }
+.news-list .bullet { color: var(--icar-green); font-weight: 700; flex-shrink: 0; padding-top: 1px; }
+.news-list .new-tag {
+  background: red; color: #fff; font-size: .55rem; font-weight: 700;
+  padding: 1px 5px; border-radius: 2px; vertical-align: middle;
+  margin-left: 4px; animation: blink 1.2s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+.news-list a { color: var(--text); }
+.news-list a:hover { color: var(--icar-orange); }
+
+/* ── Notice board ────────────────────────────────── */
+.notice-scroll {
+  height: 220px; overflow: hidden;
+}
+.notice-inner {
+  animation: scroll-up 20s linear infinite;
+}
+.notice-inner:hover { animation-play-state: paused; }
+.notice-item {
+  padding: 7px 0; border-bottom: 1px dashed #ddd;
+  font-size: .8rem; line-height: 1.5; color: var(--text);
+}
+.notice-item:last-child { border-bottom: none; }
+.notice-item .date { color: var(--icar-blue); font-weight: 600; font-size: .72rem; display: block; }
+@keyframes scroll-up {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* ── Quick links grid ────────────────────────────── */
+.quick-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ql-item {
+  background: var(--light-green); border: 1px solid var(--border);
+  border-radius: 3px; padding: 10px 8px; text-align: center;
+  font-size: .75rem; color: var(--icar-green); font-weight: 600;
+  cursor: pointer; transition: background .15s;
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+}
+.ql-item:hover { background: var(--icar-green); color: #fff; text-decoration: none; }
+.ql-item .ql-icon { font-size: 1.5rem; }
+
+/* ── Photo gallery grid ──────────────────────────── */
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+.gallery-thumb { position: relative; overflow: hidden; aspect-ratio: 4/3; }
+.gallery-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.gallery-thumb:hover img { transform: scale(1.06); }
+.gallery-thumb .thumb-cap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(0,0,0,.6); color: #fff;
+  font-size: .65rem; padding: 4px 6px;
+  transform: translateY(100%); transition: transform .3s;
+}
+.gallery-thumb:hover .thumb-cap { transform: translateY(0); }
+
+/* ── Page inner hero ─────────────────────────────── */
+.inner-banner {
+  background: linear-gradient(rgba(26,92,42,.88), rgba(26,92,42,.78)),
+              url('/images/campus-aerial.jpg') center/cover;
+  color: #fff; padding: 36px 16px;
+  text-align: center;
+}
+.inner-banner h1 { font-family: var(--serif); font-size: 1.7rem; margin-bottom: 6px; }
+.inner-banner .bc { font-size: .75rem; opacity: .8; }
+.inner-banner .bc a { color: rgba(255,255,255,.7); }
+
+/* ── Content sections ────────────────────────────── */
+.content-section { background: #fff; border: 1px solid #ddd; border-radius: 3px; padding: 20px 20px; margin-bottom: 16px; }
+.section-heading {
+  font-family: var(--serif); font-size: 1.1rem; color: var(--icar-green);
+  border-bottom: 2px solid var(--icar-green); padding-bottom: 8px;
+  margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+}
+.section-heading::before { content: ""; display: block; width: 4px; height: 18px; background: var(--icar-orange); border-radius: 2px; }
+
+/* ── Team cards ──────────────────────────────────── */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.team-card {
+  background: #fff; border: 1px solid #ddd; border-radius: 3px;
+  text-align: center; overflow: hidden;
+  transition: box-shadow .2s;
+}
+.team-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+.tc-photo { height: 160px; background: var(--light-green); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; overflow: hidden; }
+.tc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.tc-info { padding: 12px 10px; }
+.tc-name  { font-weight: 700; font-size: .88rem; color: var(--icar-green); margin-bottom: 3px; }
+.tc-desig { font-size: .72rem; color: var(--icar-orange); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+.tc-disc  { font-size: .72rem; color: var(--muted); margin-bottom: 8px; }
+.tc-email { font-size: .7rem; color: var(--icar-blue); }
+
+/* ── Research themes table ───────────────────────── */
+.theme-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+.theme-table th { background: var(--icar-green); color: #fff; padding: 9px 12px; text-align: left; font-size: .75rem; }
+.theme-table td { padding: 9px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+.theme-table tr:nth-child(even) td { background: #f9fbe7; }
+.theme-table tr:hover td { background: var(--light-green); }
+
+/* ── Publication list ────────────────────────────── */
+.pub-item {
+  padding: 12px 0; border-bottom: 1px solid #eee;
+  font-size: .82rem;
+}
+.pub-item:last-child { border-bottom: none; }
+.pub-title { font-weight: 600; color: var(--text); margin-bottom: 3px; }
+.pub-authors { color: var(--muted); margin-bottom: 2px; }
+.pub-journal { color: var(--icar-blue); font-style: italic; font-size: .78rem; }
+.pub-meta { display: flex; gap: 10px; margin-top: 5px; flex-wrap: wrap; }
+.pub-badge {
+  display: inline-block; font-size: .62rem; font-weight: 700;
+  padding: 2px 8px; border-radius: 10px; letter-spacing: .04em;
+}
+.pub-badge.journal  { background: #e3f2fd; color: var(--icar-blue); }
+.pub-badge.book     { background: #fff3e0; color: #e65100; }
+.pub-badge.bulletin { background: #e8f5e9; color: var(--icar-green); }
+.pub-badge.conf     { background: #fce4ec; color: #c62828; }
+
+/* ── Stats row ───────────────────────────────────── */
+.stats-row {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: var(--icar-green); margin-bottom: 16px;
+}
+.stat-box {
+  padding: 20px 16px; text-align: center; color: #fff;
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.stat-box:last-child { border-right: none; }
+.stat-num { font-family: var(--serif); font-size: 2rem; color: var(--icar-gold); line-height: 1; margin-bottom: 5px; }
+.stat-lbl { font-size: .72rem; opacity: .8; }
+
+/* ── Contact layout ──────────────────────────────── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 20px; }
+.map-box { background: var(--light-green); border: 1px solid var(--border); border-radius: 3px; height: 260px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; color: var(--muted); font-size: .88rem; }
+
+/* ── Form ────────────────────────────────────────── */
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: .78rem; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 8px 10px;
+  border: 1px solid #ccc; border-radius: 3px;
+  font-family: var(--sans); font-size: .82rem; color: var(--text);
+  background: #fff; transition: border-color .2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--icar-green);
+}
+.form-group textarea { min-height: 110px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.btn-submit {
+  background: var(--icar-green); color: #fff;
+  border: none; padding: 9px 28px; font-size: .82rem;
+  font-weight: 600; cursor: pointer; border-radius: 3px;
+  transition: background .2s; font-family: var(--sans);
+}
+.btn-submit:hover { background: var(--icar-green2); }
+
+/* ── Tabs ────────────────────────────────────────── */
+.tab-bar { display: flex; border-bottom: 2px solid var(--icar-green); margin-bottom: 16px; }
+.tab-btn {
+  padding: 8px 18px; background: none; border: none; cursor: pointer;
+  font-family: var(--sans); font-size: .8rem; font-weight: 600;
+  color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -2px;
+  transition: .15s;
+}
+.tab-btn.active { color: var(--icar-green); border-bottom-color: var(--icar-green); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── Footer ──────────────────────────────────────── */
+.site-footer { background: var(--icar-green); color: rgba(255,255,255,.85); margin-top: 0; }
+.footer-inner {
+  max-width: var(--max); margin: 0 auto; padding: 28px 16px 16px;
+  display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 32px;
+}
+.footer-brand .f-name { font-family: var(--serif); font-size: 1.05rem; color: #fff; margin-bottom: 6px; }
+.footer-brand .f-addr { font-size: .75rem; opacity: .75; line-height: 1.7; margin-bottom: 10px; }
+.footer-brand .f-contact { font-size: .75rem; display: flex; flex-direction: column; gap: 4px; }
+.footer-brand .f-contact a { color: rgba(255,255,255,.7); }
+.footer-col h4 { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--icar-gold); margin-bottom: 10px; }
+.footer-col a  { display: block; font-size: .75rem; color: rgba(255,255,255,.7); margin-bottom: 6px; }
+.footer-col a:hover { color: #fff; text-decoration: none; }
+.footer-bottom {
+  background: #124020; color: rgba(255,255,255,.55);
+  text-align: center; padding: 10px 16px; font-size: .68rem;
+}
+.footer-bottom a { color: rgba(255,255,255,.55); }
+
+/* ── Utility ─────────────────────────────────────── */
+.text-center { text-align: center; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.view-more-link { display: block; text-align: center; padding: 8px; font-size: .75rem; color: var(--icar-blue); border-top: 1px solid #eee; margin-top: 8px; }
+.view-more-link:hover { background: var(--light-green); text-decoration: none; }
+.info-row { display: flex; gap: 10px; align-items: flex-start; font-size: .82rem; margin-bottom: 10px; color: var(--muted); }
+.info-row .label { font-weight: 600; color: var(--text); min-width: 80px; }
+.alert-success { background: #e8f5e9; border: 1px solid #a5d6a7; color: #2e7d32; padding: 10px 14px; border-radius: 3px; font-size: .82rem; margin-top: 10px; display: none; }
+.loading { color: var(--muted); font-size: .82rem; padding: 16px 0; text-align: center; }
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 960px) {
+  .two-col   { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .hamburger { display: block; }
+  .nav-inner { flex-wrap: wrap; }
+  .nav-inner.collapsed a:not(.home-icon) { display: none; }
+  .nav-inner.collapsed.open a { display: block; width: 100%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .three-col, .two-equal { grid-template-columns: 1fr; }
+  .quick-links { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .slide img { height: 220px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <span class="flag">🇮🇳</span>
+    <span>Government of India</span>
+    <span class="sep">|</span>
+    <span>Indian Council of Agricultural Research</span>
+    <div class="right">
+      <a href="https://icar.org.in" target="_blank">ICAR</a>
+      <span class="sep">|</span>
+      <a href="https://iari.res.in" target="_blank">IARI New Delhi</a>
+      <span class="sep">|</span>
+      <a href="#" onclick="navigate('contact')">Contact</a>
+      <span class="sep">|</span>
+      <span class="skip"><a href="#main-content">Skip to Content</a></span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logos">
+      <div class="logo-emblem">🌾</div>
+    </div>
+    <div class="header-text">
+      <div class="hindi">भा.कृ.अ.प. — भारतीय कृषि अनुसंधान संस्थान, असम</div>
+      <div class="org-name" id="hdr-orgname">ICAR-Indian Agricultural Research Institute</div>
+      <div class="org-full" id="hdr-orgfull">Assam Campus, Dirpai Chapori, Gogamukh, Dhemaji, Assam</div>
+      <div class="org-sub" id="hdr-orgsub">Government of India · ICAR Institute</div>
+    </div>
+    <div class="header-right">
+      <div class="icar-logo-text">
+        <span class="icar-badge">ICAR</span>
+        <span>Estd. 2020</span>
+        <span>Dhemaji, Assam</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+  <div class="nav-inner collapsed" id="main-nav">
+    <button class="hamburger" onclick="toggleNav()">☰</button>
+    <a href="#" class="home-icon active" onclick="navigate('home')"    data-page="home">🏠 Home</a>
+    <a href="#" onclick="navigate('about')"        data-page="about">About Us</a>
+    <a href="#" onclick="navigate('schools')"      data-page="schools">Schools</a>
+    <a href="#" onclick="navigate('research')"     data-page="research">Research</a>
+    <a href="#" onclick="navigate('academics')"    data-page="academics">Academics</a>
+    <a href="#" onclick="navigate('extension')"    data-page="extension">Extension</a>
+    <a href="#" onclick="navigate('publications')" data-page="publications">Publications</a>
+    <a href="#" onclick="navigate('campus')"       data-page="campus">Our Campus</a>
+    <a href="#" onclick="navigate('staff')"        data-page="staff">Staff</a>
+    <a href="#" onclick="navigate('contact')"      data-page="contact">Contact Us</a>
+  </div>
+</nav>
+
+<!-- NEWS TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">📢 NEWS</div>
+  <div class="ticker-track">
+    <div class="ticker-content" id="ticker-content">
+      <a href="#">ICAR-Sponsored Winter School Concludes at ICAR-IARI, Assam</a>
+      <a href="#">Dhansiri Residential Complex at ICAR-IARI, Assam Inaugurated</a>
+      <a href="#">Farmer-Scientist Interaction Programme organized at Gogamukh</a>
+      <a href="#">New research project on flood-adaptive rice varieties launched</a>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  HOME PAGE                               ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page active" id="page-home">
+  <div class="page-wrap">
+    <div class="two-col">
+
+      <!-- LEFT MAIN COLUMN -->
+      <div>
+        <!-- Hero slider -->
+        <div class="box" style="margin-bottom:16px;">
+          <div class="hero-slider" id="hero-slider">
+            <div class="slide active">
+              <img src="/images/IARI_Assam_main.jpg" onerror="this.src='/images/hero-main.jpg'" alt="ICAR-IARI Assam Main Building">
+              <div class="slide-caption"><strong>ICAR-IARI Assam Campus</strong>Dirpai Chapori, Gogamukh, Dhemaji, Assam — 587 hectares of agricultural research campus</div>
+            </div>
+            <div class="slide">
+              <img src="/images/hero-flowers.jpg" alt="Flower Research Trials">
+              <div class="slide-caption"><strong>Flower & Horticulture Research</strong>Experimental trials with the Eastern Himalayan foothills in the background</div>
+            </div>
+            <div class="slide">
+              <img src="/images/campus-day.jpg" alt="Campus Daytime View">
+              <div class="slide-caption"><strong>Academic Buildings</strong>State-of-the-art infrastructure for teaching, research and extension</div>
+            </div>
+            <div class="slide">
+              <img src="/images/campus-aerial.jpg" alt="Campus Aerial View">
+              <div class="slide-caption"><strong>ICAR-IARI Assam — Aerial View</strong>The campus is spread across the banks of the Subansiri river</div>
+            </div>
+            <div class="slider-arrows">
+              <button class="arrow-btn" onclick="prevSlide()">&#10094;</button>
+              <button class="arrow-btn" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div class="slider-dots" id="slider-dots"></div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row" id="stats-row">
+          <div class="stat-box"><div class="stat-num">587</div><div class="stat-lbl">Hectares Campus Area</div></div>
+          <div class="stat-box"><div class="stat-num">50+</div><div class="stat-lbl">Research Projects</div></div>
+          <div class="stat-box"><div class="stat-num">200+</div><div class="stat-lbl">Publications</div></div>
+          <div class="stat-box"><div class="stat-num">8</div><div class="stat-lbl">NE States Served</div></div>
+        </div>
+
+        <!-- About snippet -->
+        <div class="box">
+          <div class="box-head"><span class="icon">🏛</span> About ICAR-IARI Assam <span class="view-all" onclick="navigate('about')">Read More »</span></div>
+          <div class="box-body" style="font-size:.83rem; line-height:1.75; color:#444;">
+            <p>The <strong>ICAR-Indian Agricultural Research Institute (IARI), Assam</strong> is anchored at Dirpai Chapori, Gogamukh, Dhemaji, Assam along the banks of the Subansiri river. The institute is spread over an area of <strong>587 hectares</strong>, providing ample space for operating various research, extension and teaching activities.</p>
+            <p style="margin-top:8px;">The academic journey started with the foundation stone laying ceremony on <strong>May 26, 2017</strong> by the Prime Minister, Shri Narendra Modi. The inauguration was done by Union Minister Shri Arjun Munda on <strong>4th March 2024</strong>. The institute aims to usher in the <em>'Second Green Revolution'</em> in the Northeast region.</p>
+            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="#" onclick="navigate('about')" style="background:var(--icar-green);color:#fff;padding:6px 14px;border-radius:3px;font-size:.75rem;font-weight:600;text-decoration:none;">Know More</a>
+              <a href="#" onclick="navigate('research')" style="background:var(--icar-orange);color:#fff;padding:6px 14px;border-radius:3px;font-size:.75rem;font-weight:600;text-decoration:none;">Our Research</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest Events / Gallery -->
+        <div class="box">
+          <div class="box-head"><span class="icon">📸</span> Latest Events & Gallery <span class="view-all" onclick="navigate('campus')">View All »</span></div>
+          <div class="box-body">
+            <div class="gallery-grid" id="home-gallery">
+              <div class="gallery-thumb"><img src="/images/hero-flowers.jpg" alt="Flower Trials"><div class="thumb-cap">Flower Research Trials</div></div>
+              <div class="gallery-thumb"><img src="/images/campus-day.jpg" alt="Campus Day"><div class="thumb-cap">Academic Complex</div></div>
+              <div class="gallery-thumb"><img src="/images/campus-night.jpg" alt="Campus Night"><div class="thumb-cap">Campus at Night</div></div>
+              <div class="gallery-thumb"><img src="/images/campus-aerial.jpg" alt="Aerial View"><div class="thumb-cap">Campus Aerial View</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div>
+        <!-- News & Highlights -->
+        <div class="box">
+          <div class="box-head"><span class="icon">📰</span> News & Highlights</div>
+          <div class="box-body">
+            <ul class="news-list" id="news-list">
+              <li><span class="bullet">»</span><span><a href="#">ICAR-Sponsored Winter School Concludes at ICAR-IARI, Assam <span class="new-tag">NEW</span></a></span></li>
+              <li><span class="bullet">»</span><span><a href="#">Dhansiri Residential Complex Inaugurated by Director IARI Dr. Ch. Srinivasa Rao</a></span></li>
+              <li><span class="bullet">»</span><span><a href="#">Farmer-Scientist Interaction and Input Distribution Programme at Lakhimpur</a></span></li>
+              <li><span class="bullet">»</span><span><a href="#">Interphase Meeting cum Brainstorming Session with NABARD</a></span></li>
+              <li><span class="bullet">»</span><span><a href="#">Training on Fish Processing & Value Addition organized</a></span></li>
+              <li><span class="bullet">»</span><span><a href="#">Workshop on Remote Sensing Applications in Crop Monitoring completed</a></span></li>
+            </ul>
+            <a href="#" class="view-more-link" onclick="navigate('about')">View All News »</a>
+          </div>
+        </div>
+
+        <!-- Notice Board -->
+        <div class="box">
+          <div class="box-head"><span class="icon">📋</span> Notice Board</div>
+          <div class="box-body">
+            <div class="notice-scroll">
+              <div class="notice-inner" id="notice-board">
+                <div class="notice-item"><span class="date">19 Apr 2025</span><a href="#">Applications invited for Summer Internship 2025 — Last date: 30 April 2025</a></div>
+                <div class="notice-item"><span class="date">15 Apr 2025</span><a href="#">Walk-in-Interview for Project Assistant (Soil Science) — 5 May 2025</a></div>
+                <div class="notice-item"><span class="date">10 Apr 2025</span><a href="#">Tender Notice: Supply of Laboratory Equipment — Ref: IARI/ASM/2025/04</a></div>
+                <div class="notice-item"><span class="date">05 Apr 2025</span><a href="#">Annual Report 2024-25 now available for download</a></div>
+                <div class="notice-item"><span class="date">01 Apr 2025</span><a href="#">Recruitment of Junior Research Fellow (JRF) for ICAR-funded project</a></div>
+                <div class="notice-item"><span class="date">25 Mar 2025</span><a href="#">Agromet Advisory Bulletin — Kharif Season 2025</a></div>
+                <div class="notice-item"><span class="date">20 Mar 2025</span><a href="#">Seed Distribution Programme for marginal farmers — Registration open</a></div>
+                <!-- duplicate for seamless loop -->
+                <div class="notice-item"><span class="date">19 Apr 2025</span><a href="#">Applications invited for Summer Internship 2025 — Last date: 30 April 2025</a></div>
+                <div class="notice-item"><span class="date">15 Apr 2025</span><a href="#">Walk-in-Interview for Project Assistant (Soil Science) — 5 May 2025</a></div>
+                <div class="notice-item"><span class="date">10 Apr 2025</span><a href="#">Tender Notice: Supply of Laboratory Equipment — Ref: IARI/ASM/2025/04</a></div>
+                <div class="notice-item"><span class="date">05 Apr 2025</span><a href="#">Annual Report 2024-25 now available for download</a></div>
+              </div>
+            </div>
+            <a href="#" class="view-more-link">View All Notices »</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="box">
+          <div class="box-head"><span class="icon">🔗</span> Quick Links</div>
+          <div class="box-body">
+            <div class="quick-links">
+              <a class="ql-item" href="https://icar.org.in" target="_blank"><span class="ql-icon">🏛</span>ICAR</a>
+              <a class="ql-item" href="https://iari.res.in" target="_blank"><span class="ql-icon">🌿</span>IARI</a>
+              <a class="ql-item" href="#" onclick="navigate('staff')"><span class="ql-icon">👨‍🔬</span>Scientists</a>
+              <a class="ql-item" href="#" onclick="navigate('publications')"><span class="ql-icon">📄</span>Publications</a>
+              <a class="ql-item" href="#" onclick="navigate('academics')"><span class="ql-icon">🎓</span>Academics</a>
+              <a class="ql-item" href="#" onclick="navigate('contact')"><span class="ql-icon">📞</span>Contact</a>
+              <a class="ql-item" href="https://agricoop.nic.in" target="_blank"><span class="ql-icon">🌾</span>Min. Agri.</a>
+              <a class="ql-item" href="#" onclick="navigate('extension')"><span class="ql-icon">🤝</span>Extension</a>
+              <a class="ql-item" href="#" onclick="navigate('campus')"><span class="ql-icon">🏫</span>Campus</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather -->
+        <div class="box">
+          <div class="box-head"><span class="icon">🌤</span> Agromet Advisory</div>
+          <div class="box-body" style="font-size:.78rem; color:#444; line-height:1.7;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+              <span style="font-size:2rem;">⛅</span>
+              <div><strong>Dhemaji, Assam</strong><br>Partly Cloudy · Humidity ~78%</div>
+            </div>
+            <div style="font-size:.72rem;color:var(--muted);">Latest advisory: Suitable period for paddy transplanting. Watch for blast disease. Adequate soil moisture available.</div>
+            <a href="#" class="view-more-link">Full Agromet Bulletin »</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  ABOUT PAGE                              ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-about">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; About Us</div>
+    <h1>About ICAR-IARI Assam</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="two-col">
+      <div>
+        <div class="content-section">
+          <div class="section-heading">History & Background</div>
+          <p style="font-size:.85rem;color:#444;line-height:1.85;margin-bottom:12px;">The <strong>ICAR-Indian Agricultural Research Institute (IARI), Assam</strong> is anchored at Dirpai Chapori, Gogamukh, Dhemaji, Assam along the Subansiri riverbank. The institute is spread over <strong>587 hectares</strong> of land — providing ample space for research, extension and teaching.</p>
+          <p style="font-size:.85rem;color:#444;line-height:1.85;margin-bottom:12px;">The academic journey started with the <strong>foundation stone laying on May 26, 2017</strong> by the Prime Minister, Shri Narendra Modi. The formal inauguration was done by Union Minister Shri Arjun Munda on <strong>4th March 2024</strong>.</p>
+          <p style="font-size:.85rem;color:#444;line-height:1.85;">The institute aims to undertake systematic research for developing efficient agricultural technologies, contributing to the 'Second Green Revolution' in Northeast India. Education, research and outreach are the core objectives.</p>
+        </div>
+        <div class="content-section">
+          <div class="section-heading">Mission & Vision</div>
+          <div class="two-equal">
+            <div style="background:var(--light-green);border:1px solid var(--border);border-radius:3px;padding:14px;">
+              <div style="font-weight:700;color:var(--icar-green);margin-bottom:6px;font-size:.85rem;">🎯 Mission</div>
+              <div style="font-size:.8rem;color:#444;line-height:1.7;">To serve as a premier institution for higher agricultural education, research and extension in Northeast India, developing technologies for food security, sustainability and farmers' welfare.</div>
+            </div>
+            <div style="background:#fff3e0;border:1px solid #ffe0b2;border-radius:3px;padding:14px;">
+              <div style="font-weight:700;color:var(--icar-orange);margin-bottom:6px;font-size:.85rem;">🔭 Vision</div>
+              <div style="font-size:.8rem;color:#444;line-height:1.7;">To become a hub of higher agricultural education and research in South-East Asia, with special focus on the unique agro-ecological systems of the Northeast.</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-section">
+          <div class="section-heading">Mandates & Objectives</div>
+          <ul style="list-style:none;font-size:.83rem;color:#444;display:flex;flex-direction:column;gap:8px;">
+            <li style="display:flex;gap:8px;"><span style="color:var(--icar-green);font-weight:700;">✓</span> To serve as an institution of learning in higher agricultural education in South-East Asia</li>
+            <li style="display:flex;gap:8px;"><span style="color:var(--icar-green);font-weight:700;">✓</span> To conserve and utilize high-value biotic resources of Northeast India</li>
+            <li style="display:flex;gap:8px;"><span style="color:var(--icar-green);font-weight:700;">✓</span> To improve crop and plant genotypes having speciality traits</li>
+            <li style="display:flex;gap:8px;"><span style="color:var(--icar-green);font-weight:700;">✓</span> To manage acid soils and develop technologies for productivity maximization</li>
+            <li style="display:flex;gap:8px;"><span style="color:var(--icar-green);font-weight:700;">✓</span> To develop organic farming modules for major cropping systems</li>
+            <li style="display:flex;gap:8px;"><span style="color:var(--icar-green);font-weight:700;">✓</span> To promote agri-education and realize the Second Green Revolution in Northeast India</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="box">
+          <div class="box-head"><span class="icon">📊</span> At a Glance</div>
+          <div class="box-body">
+            <div class="info-row"><span class="label">Location</span><span>Dirpai Chapori, Gogamukh, Dhemaji, Assam</span></div>
+            <div class="info-row"><span class="label">Area</span><span>587 hectares</span></div>
+            <div class="info-row"><span class="label">Founded</span><span>Foundation stone: May 2017; Inaugurated: March 2024</span></div>
+            <div class="info-row"><span class="label">Affiliation</span><span>ICAR / Deemed University (IARI New Delhi)</span></div>
+            <div class="info-row"><span class="label">Region</span><span>Serving 8 Northeast States</span></div>
+            <div class="info-row"><span class="label">Divisions</span><span>Crop Improvement, Horticulture, Animal Science & Fisheries</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head"><span class="icon">🏗</span> Infrastructure</div>
+          <div class="box-body">
+            <ul class="news-list">
+              <li><span class="bullet">🌱</span><span>Experimental Farm — 50+ ha</span></li>
+              <li><span class="bullet">🛰️</span><span>GIS & Remote Sensing Laboratory</span></li>
+              <li><span class="bullet">🧪</span><span>Soil & Water Testing Lab (NABL accredited)</span></li>
+              <li><span class="bullet">📊</span><span>Biometrics & Statistics Unit</span></li>
+              <li><span class="bullet">🌾</span><span>Seed Processing & Storage Unit</span></li>
+              <li><span class="bullet">🐟</span><span>Fisheries & Aquaculture Unit</span></li>
+              <li><span class="bullet">📚</span><span>Library — 5000+ volumes</span></li>
+              <li><span class="bullet">🏠</span><span>Dhansiri Residential Complex</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  SCHOOLS PAGE                            ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-schools">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; Schools</div>
+    <h1>Schools / Divisions</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="three-col">
+      <div class="content-section">
+        <div class="section-heading">🌿 Division of Crop Improvement</div>
+        <p style="font-size:.83rem;color:#444;line-height:1.75;margin-bottom:10px;">Focused on development of high-yielding, stress-tolerant varieties of rice, pulses, oilseeds and other crops adapted to Northeast agro-ecology. Key activities include:</p>
+        <ul style="font-size:.8rem;color:#555;list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li>» Rice breeding for flood and drought tolerance</li>
+          <li>» Joha rice aroma QTL mapping</li>
+          <li>» Black rice varietal improvement</li>
+          <li>» Pulse crop improvement for acid soils</li>
+          <li>» Mustard hybrid development</li>
+        </ul>
+      </div>
+      <div class="content-section">
+        <div class="section-heading">🍊 Division of Horticulture</div>
+        <p style="font-size:.83rem;color:#444;line-height:1.75;margin-bottom:10px;">Research and development in fruits, vegetables, flowers, spices and medicinal plants unique to Northeast India. Key activities include:</p>
+        <ul style="font-size:.8rem;color:#555;list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li>» Flower and ornamental horticulture research</li>
+          <li>» Vegetable variety trials</li>
+          <li>» Medicinal & aromatic plant research</li>
+          <li>» Post-harvest technology development</li>
+          <li>» Tea and large cardamom research</li>
+        </ul>
+      </div>
+      <div class="content-section">
+        <div class="section-heading">🐄 Division of Animal Science & Fisheries</div>
+        <p style="font-size:.83rem;color:#444;line-height:1.75;margin-bottom:10px;">Livestock, poultry, fisheries and integrated farming systems research for comprehensive agricultural development in the region:</p>
+        <ul style="font-size:.8rem;color:#555;list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li>» Ornamental fish culture & aquaculture</li>
+          <li>» Integrated farming systems (IFS)</li>
+          <li>» Poultry breed development for NE</li>
+          <li>» Livestock improvement programmes</li>
+          <li>» Skill development in fish processing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  RESEARCH PAGE                           ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-research">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; Research</div>
+    <h1>Research</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="content-section">
+      <div class="section-heading">Active Research Themes</div>
+      <table class="theme-table" id="research-table">
+        <thead><tr><th>Theme</th><th>Description</th><th>Status</th><th>Funding</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Remote Sensing & GIS</strong></td><td>Satellite-based crop monitoring, flood mapping, land-use change detection in Brahmaputra basin</td><td><span style="color:green;font-weight:600;">Ongoing</span></td><td>ICAR, ISRO</td></tr>
+          <tr><td><strong>Agricultural Statistics</strong></td><td>Small-area estimation, Bayesian models for crop yield and loss assessment</td><td><span style="color:green;font-weight:600;">Ongoing</span></td><td>ICAR, MoSPI</td></tr>
+          <tr><td><strong>Climate-Smart Agriculture</strong></td><td>Flood-tolerant varieties, climate change impact on tea, carbon sequestration</td><td><span style="color:green;font-weight:600;">Ongoing</span></td><td>NICRA, ICAR</td></tr>
+          <tr><td><strong>Precision Agriculture & IoT</strong></td><td>ML-based pest forecasting, drone nutrient mapping, IoT soil sensor network</td><td><span style="color:var(--icar-orange);font-weight:600;">New</span></td><td>RKVY-RAFTAAR</td></tr>
+          <tr><td><strong>Soil & Water Management</strong></td><td>Soil health card validation, waterlogging management, watershed development</td><td><span style="color:green;font-weight:600;">Ongoing</span></td><td>ICAR, NHM</td></tr>
+          <tr><td><strong>Crop Improvement</strong></td><td>Joha rice, Black rice, Mustard hybrid development, pulse breeding for acid soils</td><td><span style="color:green;font-weight:600;">Ongoing</span></td><td>AICRP-Rice</td></tr>
+          <tr><td><strong>Organic Farming</strong></td><td>Organic module development for major cropping systems of NE India</td><td><span style="color:green;font-weight:600;">Ongoing</span></td><td>ICAR, PKVY</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">50+</div><div class="stat-lbl">Research Projects</div></div>
+      <div class="stat-box"><div class="stat-num">200+</div><div class="stat-lbl">Publications</div></div>
+      <div class="stat-box"><div class="stat-num">15+</div><div class="stat-lbl">Partner Institutes</div></div>
+      <div class="stat-box"><div class="stat-num">10+</div><div class="stat-lbl">Technologies Developed</div></div>
+    </div>
+    <div class="content-section">
+      <div class="section-heading">Externally Funded Projects</div>
+      <p style="font-size:.83rem;color:var(--muted);">Detailed list of externally funded projects will be updated here. Please contact the Research Management Cell for more information.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  ACADEMICS PAGE                          ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-academics">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; Academics</div>
+    <h1>Academics</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'tab-prog')">Programmes</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-admission')">Admissions</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-training')">Training</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-tools')">Software & Tools</button>
+    </div>
+    <div class="tab-panel active" id="tab-prog">
+      <div class="three-col">
+        <div class="content-section">
+          <div style="background:var(--icar-green);color:#fff;display:inline-block;padding:3px 12px;border-radius:10px;font-size:.72rem;font-weight:700;margin-bottom:10px;">Ph.D.</div>
+          <div class="section-heading" style="font-size:.95rem;">Agricultural Sciences</div>
+          <div class="info-row"><span class="label">Duration</span><span>3–5 years</span></div>
+          <div class="info-row"><span class="label">Seats</span><span>As per ICAR allocation</span></div>
+          <div class="info-row"><span class="label">Affiliation</span><span>IARI New Delhi (Deemed Univ.)</span></div>
+          <p style="font-size:.8rem;color:#444;margin-top:8px;line-height:1.7;">Doctoral research across disciplines including agricultural statistics, remote sensing, crop science, horticulture, soil science, and fisheries.</p>
+        </div>
+        <div class="content-section">
+          <div style="background:var(--icar-blue);color:#fff;display:inline-block;padding:3px 12px;border-radius:10px;font-size:.72rem;font-weight:700;margin-bottom:10px;">M.Sc.</div>
+          <div class="section-heading" style="font-size:.95rem;">Agricultural Sciences</div>
+          <div class="info-row"><span class="label">Duration</span><span>2 years</span></div>
+          <div class="info-row"><span class="label">Seats</span><span>As per ICAR allocation</span></div>
+          <div class="info-row"><span class="label">Affiliation</span><span>IARI / Assam Agricultural Univ.</span></div>
+          <p style="font-size:.8rem;color:#444;margin-top:8px;line-height:1.7;">Post-graduate programmes with dissertation work conducted at the station in collaboration with partner universities.</p>
+        </div>
+        <div class="content-section">
+          <div style="background:var(--icar-orange);color:#fff;display:inline-block;padding:3px 12px;border-radius:10px;font-size:.72rem;font-weight:700;margin-bottom:10px;">INTERNSHIP</div>
+          <div class="section-heading" style="font-size:.95rem;">Research Internship</div>
+          <div class="info-row"><span class="label">Duration</span><span>4–8 weeks</span></div>
+          <div class="info-row"><span class="label">Seats</span><span>~10 per season</span></div>
+          <div class="info-row"><span class="label">Eligibility</span><span>B.Sc./M.Sc. students</span></div>
+          <p style="font-size:.8rem;color:#444;margin-top:8px;line-height:1.7;">Hands-on training in GIS, R, Python, field data collection, crop physiology, and laboratory techniques.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" id="tab-admission">
+      <div class="content-section">
+        <div class="section-heading">How to Apply</div>
+        <p style="font-size:.83rem;color:#444;line-height:1.8;margin-bottom:12px;">Ph.D. and M.Sc. admissions are through the <strong>ICAR All India Entrance Examination for Admission (ICAR-AIEEA)</strong>, conducted by the National Testing Agency (NTA).</p>
+        <ul style="font-size:.82rem;color:#444;list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+          <li>» Visit <a href="https://icar.org.in" target="_blank">icar.org.in</a> for AIEEA notification</li>
+          <li>» Register on NTA portal during the application window</li>
+          <li>» Appear for the entrance examination</li>
+          <li>» Merit-based counselling and allotment</li>
+          <li>» For internships: Send CV + interest letter directly to the Station Head</li>
+        </ul>
+        <a href="https://icar.org.in" target="_blank" style="background:var(--icar-green);color:#fff;padding:7px 18px;border-radius:3px;font-size:.78rem;font-weight:600;display:inline-block;text-decoration:none;">ICAR-AIEEA Portal →</a>
+      </div>
+    </div>
+    <div class="tab-panel" id="tab-training">
+      <div class="content-section">
+        <div class="section-heading">Recent Training Programmes & Workshops</div>
+        <table class="theme-table">
+          <thead><tr><th>Programme</th><th>Date</th><th>Participants</th><th>Sponsor</th></tr></thead>
+          <tbody>
+            <tr><td>ICAR-Sponsored Winter School on "Optimizing Natural Resources through New Age Technologies for Smart Agriculture"</td><td>5–25 Feb 2025</td><td>25</td><td>ICAR</td></tr>
+            <tr><td>Workshop on Remote Sensing Applications in Crop Monitoring</td><td>Feb 2025</td><td>45</td><td>ICAR-IARI Assam</td></tr>
+            <tr><td>Training on Fish Processing & Value Addition</td><td>Jul 2024</td><td>30</td><td>ICAR-IARI Assam</td></tr>
+            <tr><td>Skill Development in Value Added Milk Products</td><td>May 2024</td><td>25</td><td>ICAR-IARI Assam</td></tr>
+            <tr><td>Aquarium Fabrication & Ornamental Fish Keeping</td><td>Apr 2024</td><td>20</td><td>ICAR-IARI Assam</td></tr>
+            <tr><td>R for Agricultural Data Analysis</td><td>Nov 2024</td><td>38</td><td>ICAR-IARI Assam</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="tab-panel" id="tab-tools">
+      <div class="content-section">
+        <div class="section-heading">Software & Tools Used in Training</div>
+        <div class="three-col">
+          <div style="background:var(--light-green);border:1px solid var(--border);border-radius:3px;padding:12px;"><strong style="font-size:.85rem;color:var(--icar-green);">R / RStudio</strong><div style="font-size:.78rem;color:#555;margin-top:4px;">Statistical computing, biometrics, agricultural data analysis</div></div>
+          <div style="background:var(--light-green);border:1px solid var(--border);border-radius:3px;padding:12px;"><strong style="font-size:.85rem;color:var(--icar-green);">Python (NumPy, Pandas, sklearn)</strong><div style="font-size:.78rem;color:#555;margin-top:4px;">Data science, machine learning, crop modelling</div></div>
+          <div style="background:var(--light-green);border:1px solid var(--border);border-radius:3px;padding:12px;"><strong style="font-size:.85rem;color:var(--icar-green);">QGIS / ArcGIS</strong><div style="font-size:.78rem;color:#555;margin-top:4px;">GIS mapping, spatial analysis, remote sensing</div></div>
+          <div style="background:var(--light-green);border:1px solid var(--border);border-radius:3px;padding:12px;"><strong style="font-size:.85rem;color:var(--icar-green);">Google Earth Engine</strong><div style="font-size:.78rem;color:#555;margin-top:4px;">Cloud-based satellite image analysis</div></div>
+          <div style="background:var(--light-green);border:1px solid var(--border);border-radius:3px;padding:12px;"><strong style="font-size:.85rem;color:var(--icar-green);">DSSAT / ORYZA</strong><div style="font-size:.78rem;color:#555;margin-top:4px;">Crop growth simulation models</div></div>
+          <div style="background:var(--light-green);border:1px solid var(--border);border-radius:3px;padding:12px;"><strong style="font-size:.85rem;color:var(--icar-green);">SAS / SPSS</strong><div style="font-size:.78rem;color:#555;margin-top:4px;">Agricultural statistics and experimental design</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  EXTENSION PAGE                          ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-extension">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; Extension</div>
+    <h1>Extension & Outreach</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="two-col">
+      <div>
+        <div class="content-section">
+          <div class="section-heading">Extension Activities</div>
+          <table class="theme-table">
+            <thead><tr><th>Activity</th><th>Reach</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Front Line Demonstrations (FLD)</strong><br><small>On-farm demonstration of improved varieties and practices</small></td><td>500+ farmers/year</td></tr>
+              <tr><td><strong>Agromet Advisory Services</strong><br><small>Weekly weather-based advisories via SMS & WhatsApp</small></td><td>10,000+ subscribers</td></tr>
+              <tr><td><strong>Kisan Melas & Field Days</strong><br><small>Annual farmer fairs and technology exhibitions</small></td><td>2000+ visitors/event</td></tr>
+              <tr><td><strong>Farmer Training Programmes</strong><br><small>Short-duration practical training on improved agri-practices</small></td><td>300+ farmers/year</td></tr>
+              <tr><td><strong>Input Distribution Programmes</strong><br><small>Seeds, bio-inputs for marginal & small farmers</small></td><td>1000+ farmers</td></tr>
+              <tr><td><strong>Extension Publications</strong><br><small>Bulletins, leaflets in English & Assamese</small></td><td>35+ bulletins</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="content-section">
+          <div class="section-heading">Key Partners</div>
+          <ul class="news-list">
+            <li><span class="bullet">»</span><span>Assam Agricultural University (AAU)</span></li>
+            <li><span class="bullet">»</span><span>State Agriculture Department, Assam</span></li>
+            <li><span class="bullet">»</span><span>ISRO–North Eastern Space Application Centre (NESAC)</span></li>
+            <li><span class="bullet">»</span><span>Krishi Vigyan Kendras (KVKs) across Assam</span></li>
+            <li><span class="bullet">»</span><span>NABARD — Interphase collaboration</span></li>
+            <li><span class="bullet">»</span><span>National Food Security Mission (NFSM)</span></li>
+            <li><span class="bullet">»</span><span>International Rice Research Institute (IRRI)</span></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="box">
+          <div class="box-head"><span class="icon">📊</span> Outreach at a Glance</div>
+          <div class="box-body">
+            <div class="stats-row" style="grid-template-columns:1fr 1fr;margin-bottom:0;">
+              <div class="stat-box"><div class="stat-num">500+</div><div class="stat-lbl">FLD Farmers</div></div>
+              <div class="stat-box"><div class="stat-num">10K+</div><div class="stat-lbl">Advisory Subscribers</div></div>
+              <div class="stat-box"><div class="stat-num">300+</div><div class="stat-lbl">Trained/Year</div></div>
+              <div class="stat-box"><div class="stat-num">15+</div><div class="stat-lbl">Active MoUs</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head"><span class="icon">📰</span> Recent Events</div>
+          <div class="box-body">
+            <ul class="news-list">
+              <li><span class="bullet">»</span><span><a href="#">Input injection programme at Dhakuakhana, Lakhimpur (Mar 2025)</a></span></li>
+              <li><span class="bullet">»</span><span><a href="#">Awareness programme on scientific maize cultivation (Feb 2025)</a></span></li>
+              <li><span class="bullet">»</span><span><a href="#">Field day on Millet cultivation for sustainable livelihood (Nov 2024)</a></span></li>
+              <li><span class="bullet">»</span><span><a href="#">Interphase meeting with NABARD (May 2024)</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  PUBLICATIONS PAGE                       ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-publications">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; Publications</div>
+    <h1>Publications</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'tab-journals')">Journal Articles</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-books')">Books & Chapters</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-bulletins')">Tech Bulletins</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-newsletters')">Newsletters</button>
+    </div>
+    <div class="tab-panel active content-section" id="tab-journals">
+      <div id="pub-journals">
+        <div class="pub-item"><div class="pub-title">Spatiotemporal analysis of rice yield in Brahmaputra valley using multi-temporal Sentinel-2 imagery</div><div class="pub-authors">[Author et al.] (2024)</div><div class="pub-journal">Remote Sensing of Environment, Elsevier</div><div class="pub-meta"><span class="pub-badge journal">Journal Article</span></div></div>
+        <div class="pub-item"><div class="pub-title">Small-area estimation of crop acreage in Assam districts using satellite data</div><div class="pub-authors">[Author et al.] (2024)</div><div class="pub-journal">Journal of Indian Society of Agricultural Statistics</div><div class="pub-meta"><span class="pub-badge journal">Journal Article</span></div></div>
+        <div class="pub-item"><div class="pub-title">Bayesian hierarchical model for crop loss estimation due to floods in Assam</div><div class="pub-authors">[Author et al.] (2023)</div><div class="pub-journal">Agricultural Systems, Elsevier</div><div class="pub-meta"><span class="pub-badge journal">Journal Article</span></div></div>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:16px;font-style:italic;">Add more publications via the Admin Panel → Publications section.</p>
+      </div>
+    </div>
+    <div class="tab-panel content-section" id="tab-books">
+      <div class="pub-item"><div class="pub-title">Remote Sensing Applications in Agricultural Statistics: Northeast India Perspective</div><div class="pub-authors">[Author et al.] (2023)</div><div class="pub-journal">Advances in Agricultural Statistics, Springer</div><div class="pub-meta"><span class="pub-badge book">Book Chapter</span></div></div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:16px;font-style:italic;">Add more books via the Admin Panel → Publications section.</p>
+    </div>
+    <div class="tab-panel content-section" id="tab-bulletins">
+      <div class="pub-item"><div class="pub-title">Improved Practices for Flood-Tolerant Rice Cultivation in Assam</div><div class="pub-authors">ICAR-IARI Assam (2023)</div><div class="pub-journal">ICAR-IARI Technical Bulletin No. 35</div><div class="pub-meta"><span class="pub-badge bulletin">Technical Bulletin</span></div></div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:16px;font-style:italic;">Add more bulletins via the Admin Panel → Publications section.</p>
+    </div>
+    <div class="tab-panel content-section" id="tab-newsletters">
+      <ul class="news-list">
+        <li><span class="bullet">📄</span><span><a href="#">Newsletter Volume 2, Issue 4 (October–December 2024)</a></span></li>
+        <li><span class="bullet">📄</span><span><a href="#">Newsletter Volume 2, Issue 3 (July–September 2024)</a></span></li>
+        <li><span class="bullet">📄</span><span><a href="#">Newsletter Volume 2, Issue 2 (April–June 2024)</a></span></li>
+        <li><span class="bullet">📄</span><span><a href="#">Newsletter Volume 2, Issue 1 (January–March 2024)</a></span></li>
+        <li><span class="bullet">📄</span><span><a href="#">Newsletter Volume 1, Issue 2 (July–December 2022)</a></span></li>
+        <li><span class="bullet">📄</span><span><a href="#">Newsletter Volume 1, Issue 1 — Inaugural Issue</a></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  CAMPUS PAGE                             ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-campus">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; Our Campus</div>
+    <h1>Our Campus</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="content-section">
+      <div class="section-heading">Campus Gallery</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;">
+        <div class="gallery-thumb" style="aspect-ratio:auto;"><img src="/images/hero-main.jpg" alt="Main Building" style="height:200px;width:100%;object-fit:cover;border-radius:3px;"><p style="font-size:.75rem;color:var(--muted);padding:5px 0;">Main Administrative Building</p></div>
+        <div class="gallery-thumb" style="aspect-ratio:auto;"><img src="/images/hero-flowers.jpg" alt="Flower Trials" style="height:200px;width:100%;object-fit:cover;border-radius:3px;"><p style="font-size:.75rem;color:var(--muted);padding:5px 0;">Flower Research Trials</p></div>
+        <div class="gallery-thumb" style="aspect-ratio:auto;"><img src="/images/campus-day.jpg" alt="Campus Day" style="height:200px;width:100%;object-fit:cover;border-radius:3px;"><p style="font-size:.75rem;color:var(--muted);padding:5px 0;">Academic Complex — Daytime</p></div>
+        <div class="gallery-thumb" style="aspect-ratio:auto;"><img src="/images/campus-night.jpg" alt="Campus Night" style="height:200px;width:100%;object-fit:cover;border-radius:3px;"><p style="font-size:.75rem;color:var(--muted);padding:5px 0;">Campus Illuminated at Night</p></div>
+        <div class="gallery-thumb" style="aspect-ratio:auto;"><img src="/images/campus-aerial.jpg" alt="Aerial View" style="height:200px;width:100%;object-fit:cover;border-radius:3px;"><p style="font-size:.75rem;color:var(--muted);padding:5px 0;">Campus — Aerial View with Mountains</p></div>
+      </div>
+    </div>
+    <div class="content-section">
+      <div class="section-heading">Campus Facts</div>
+      <div class="two-equal">
+        <div class="info-row"><span class="label">Total Area</span><span>587 hectares along Subansiri riverbank</span></div>
+        <div class="info-row"><span class="label">Location</span><span>Dirpai Chapori, Gogamukh, Dhemaji</span></div>
+        <div class="info-row"><span class="label">Academic Blocks</span><span>3 divisions operational</span></div>
+        <div class="info-row"><span class="label">Residential</span><span>Dhansiri Residential Complex</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  STAFF PAGE                              ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-staff">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; Staff</div>
+    <h1>Scientists & Staff</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="content-section">
+      <div class="section-heading">Scientific Staff</div>
+      <div class="team-grid" id="team-grid">
+        <div class="team-card"><div class="tc-photo">👨‍🔬</div><div class="tc-info"><div class="tc-name">Dr. [Name]</div><div class="tc-desig">Senior Scientist</div><div class="tc-disc">Agricultural Statistics & Remote Sensing</div><div class="tc-email"><a href="#">scientist@icar.gov.in</a></div></div></div>
+        <div class="team-card"><div class="tc-photo">👩‍🔬</div><div class="tc-info"><div class="tc-name">Dr. [Name]</div><div class="tc-desig">Scientist</div><div class="tc-disc">Crop Improvement</div><div class="tc-email"><a href="#">scientist@icar.gov.in</a></div></div></div>
+        <div class="team-card"><div class="tc-photo">👨‍🔬</div><div class="tc-info"><div class="tc-name">Dr. [Name]</div><div class="tc-desig">Scientist</div><div class="tc-disc">Horticulture</div><div class="tc-email"><a href="#">scientist@icar.gov.in</a></div></div></div>
+        <div class="team-card"><div class="tc-photo">👩‍🔬</div><div class="tc-info"><div class="tc-name">Dr. [Name]</div><div class="tc-desig">Scientist</div><div class="tc-disc">Animal Science & Fisheries</div><div class="tc-email"><a href="#">scientist@icar.gov.in</a></div></div></div>
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:16px;font-style:italic;">Update team members via Admin Panel → 👨‍🔬 Team Members.</p>
+    </div>
+    <div class="content-section">
+      <div class="section-heading">Technical & Administrative Staff</div>
+      <table class="theme-table">
+        <thead><tr><th>Name</th><th>Designation</th><th>Department/Unit</th></tr></thead>
+        <tbody id="staff-table">
+          <tr><td>Shri [Name]</td><td>Technical Officer (GIS)</td><td>Remote Sensing Lab</td></tr>
+          <tr><td>Shri [Name]</td><td>Technical Officer (Statistics)</td><td>Biometrics Unit</td></tr>
+          <tr><td>Smt [Name]</td><td>Administrative Officer</td><td>Administration</td></tr>
+          <tr><td>Shri [Name]</td><td>Accounts Officer</td><td>Finance</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:10px;font-style:italic;">Update staff list via Admin Panel.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  CONTACT PAGE                            ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page" id="page-contact">
+  <div class="inner-banner">
+    <div class="bc"><a href="#" onclick="navigate('home')">Home</a> &rsaquo; Contact Us</div>
+    <h1>Contact Us</h1>
+  </div>
+  <div class="page-wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="content-section">
+          <div class="section-heading">Station Details</div>
+          <div class="info-row"><span class="label">Address</span><span id="ct-address">Dirpai Chapori, Gogamukh, Dhemaji, Assam — 787058</span></div>
+          <div class="info-row"><span class="label">Phone</span><span id="ct-phone">+91-XXXX-XXXXXX</span></div>
+          <div class="info-row"><span class="label">Email</span><a id="ct-email" href="mailto:iari.assam@icar.gov.in">iari.assam@icar.gov.in</a></div>
+          <div class="info-row"><span class="label">Hours</span><span>Mon–Fri: 9:00–17:30 | Sat: 9:00–13:00</span></div>
+        </div>
+        <div class="map-box">
+          <span style="font-size:2rem;">🗺️</span>
+          <span style="font-size:.85rem;font-weight:600;">ICAR-IARI Assam</span>
+          <span style="font-size:.75rem;">Dirpai Chapori, Gogamukh, Dhemaji</span>
+          <a href="https://maps.google.com/?q=ICAR+IARI+Assam+Gogamukh+Dhemaji" target="_blank" style="background:var(--icar-green);color:#fff;padding:6px 14px;border-radius:3px;font-size:.75rem;font-weight:600;text-decoration:none;margin-top:8px;">Open in Google Maps →</a>
+        </div>
+        <div class="content-section" style="margin-top:16px;">
+          <div class="section-heading">Useful Links</div>
+          <ul class="news-list">
+            <li><span class="bullet">»</span><span><a href="https://icar.org.in" target="_blank">ICAR Official Website</a></span></li>
+            <li><span class="bullet">»</span><span><a href="https://iari.res.in" target="_blank">IARI New Delhi</a></span></li>
+            <li><span class="bullet">»</span><span><a href="https://agricoop.nic.in" target="_blank">Ministry of Agriculture & Farmers Welfare</a></span></li>
+            <li><span class="bullet">»</span><span><a href="https://iariassam.icar.gov.in" target="_blank">ICAR-IARI Assam Official Portal</a></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-section">
+        <div class="section-heading">Send a Message</div>
+        <form id="contact-form" onsubmit="handleContact(event)">
+          <div class="form-row">
+            <div class="form-group"><label>First Name *</label><input type="text" required placeholder="First name"></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" required placeholder="Last name"></div>
+          </div>
+          <div class="form-group"><label>Email *</label><input type="email" required placeholder="your@email.com"></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91-XXXXXXXXXX"></div>
+          <div class="form-group">
+            <label>Enquiry Type *</label>
+            <select required>
+              <option value="">— Select —</option>
+              <option>Research Collaboration</option>
+              <option>Student Internship / Training</option>
+              <option>Farmer / Extension Query</option>
+              <option>RTI Query</option>
+              <option>Media / Press</option>
+              <option>General Information</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message *</label><textarea required placeholder="Describe your enquiry..."></textarea></div>
+          <button type="submit" class="btn-submit">Submit Enquiry</button>
+          <div class="alert-success" id="form-success">✓ Your message has been submitted. We will respond within 2 working days.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="f-name">ICAR-Indian Agricultural Research Institute, Assam</div>
+      <div class="f-addr">Dirpai Chapori, Gogamukh, Dhemaji, Assam — 787058<br>India</div>
+      <div class="f-contact">
+        <span>✉ <a href="mailto:iari.assam@icar.gov.in">iari.assam@icar.gov.in</a></span>
+        <span>📞 +91-XXXX-XXXXXX</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#" onclick="navigate('home')">Home</a>
+      <a href="#" onclick="navigate('about')">About Us</a>
+      <a href="#" onclick="navigate('schools')">Schools</a>
+      <a href="#" onclick="navigate('research')">Research</a>
+      <a href="#" onclick="navigate('academics')">Academics</a>
+      <a href="#" onclick="navigate('extension')">Extension</a>
+      <a href="#" onclick="navigate('staff')">Staff</a>
+      <a href="#" onclick="navigate('contact')">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Government</h4>
+      <a href="https://icar.org.in" target="_blank">ICAR</a>
+      <a href="https://iari.res.in" target="_blank">IARI New Delhi</a>
+      <a href="https://agricoop.nic.in" target="_blank">Ministry of Agriculture</a>
+      <a href="https://india.gov.in" target="_blank">India.gov.in</a>
+      <a href="https://data.gov.in" target="_blank">Data.gov.in</a>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <a href="#">RTI</a>
+      <a href="#">Tenders</a>
+      <a href="#">Recruitment</a>
+      <a href="#" onclick="navigate('publications')">Publications</a>
+      <a href="#" onclick="navigate('campus')">Our Campus</a>
+      <a href="/admin" target="_blank">Admin Login</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 ICAR-Indian Agricultural Research Institute, Assam. All Rights Reserved. &nbsp;|&nbsp;
+    Designed by AKMU, ICAR-IARI Assam &nbsp;|&nbsp;
+    <a href="#">Disclaimer</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+// ── Slider ──────────────────────────────────────────
+let slideIdx = 0;
+const slides = document.querySelectorAll('.slide');
+const dotsEl = document.getElementById('slider-dots');
+
+slides.forEach((_, i) => {
+  const d = document.createElement('button');
+  d.className = 'dot' + (i === 0 ? ' active' : '');
+  d.onclick = () => goSlide(i);
+  dotsEl.appendChild(d);
+});
+
+function goSlide(n) {
+  slides[slideIdx].classList.remove('active');
+  dotsEl.children[slideIdx].classList.remove('active');
+  slideIdx = (n + slides.length) % slides.length;
+  slides[slideIdx].classList.add('active');
+  dotsEl.children[slideIdx].classList.add('active');
+}
+function nextSlide() { goSlide(slideIdx + 1); }
+function prevSlide() { goSlide(slideIdx - 1); }
+setInterval(nextSlide, 5000);
+
+// ── Navigation ───────────────────────────────────────
+function navigate(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById('page-' + page);
+  if (el) el.classList.add('active');
+  document.querySelectorAll('#main-nav a[data-page]').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === page);
+  });
+  document.getElementById('main-nav').classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('page-title').textContent =
+    'ICAR-IARI Assam | ' + page.charAt(0).toUpperCase() + page.slice(1);
+}
+
+function toggleNav() {
+  document.getElementById('main-nav').classList.toggle('open');
+}
+
+// ── Tabs ─────────────────────────────────────────────
+function switchTab(btn, panelId) {
+  const bar = btn.closest('.tab-bar');
+  bar.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const section = btn.closest('.page-wrap') || btn.closest('.page');
+  section.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(panelId).classList.add('active');
+}
+
+// ── Contact form ─────────────────────────────────────
+function handleContact(e) {
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'block';
+  e.target.querySelector('.btn-submit').disabled = true;
+}
+
+// ── Load CMS data from JSON ──────────────────────────
+async function loadData(path) {
+  try {
+    const r = await fetch(path + '?t=' + Date.now());
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
+}
+
+async function applySettings() {
+  const s = await loadData('/data/settings.json');
+  if (!s) return;
+  if (s.fullName) document.getElementById('hdr-orgname').textContent = s.fullName;
+  if (s.address)  {
+    document.getElementById('hdr-orgfull').textContent = s.address;
+    document.getElementById('ct-address').textContent  = s.address;
+  }
+  if (s.phone) document.getElementById('ct-phone').textContent = s.phone;
+  if (s.email) {
+    const ce = document.getElementById('ct-email');
+    ce.textContent = s.email; ce.href = 'mailto:' + s.email;
+  }
+  // update footer email
+  document.querySelector('.f-contact a').textContent = s.email || 'iari.assam@icar.gov.in';
+  document.querySelector('.f-contact a').href = 'mailto:' + (s.email || 'iari.assam@icar.gov.in');
+}
+
+async function applyHome() {
+  const h = await loadData('/data/home.json');
+  if (!h) return;
+  if (h.stats && h.stats.length) {
+    document.getElementById('stats-row').innerHTML = h.stats.map(s =>
+      `<div class="stat-box"><div class="stat-num">${s.value}</div><div class="stat-lbl">${s.label}</div></div>`
+    ).join('');
+  }
+  if (h.news && h.news.length) {
+    document.getElementById('news-list').innerHTML = h.news.map((n,i) =>
+      `<li><span class="bullet">»</span><span><a href="${n.href||'#'}">${n.title}${i===0?' <span class="new-tag">NEW</span>':''}</a></span></li>`
+    ).join('');
+    // update ticker
+    document.getElementById('ticker-content').innerHTML = h.news.map(n =>
+      `<a href="${n.href||'#'}">${n.title}</a>`
+    ).join('');
+  }
+}
+
+async function applyTeam() {
+  const grid = document.getElementById('team-grid');
+  // Try loading team index
+  let members = [];
+  for (let i = 1; i <= 10; i++) {
+    const m = await loadData(`/data/team/scientist-${i}.json`);
+    if (m) members.push(m);
+  }
+  if (!members.length) return;
+  members.sort((a,b) => (a.order||99)-(b.order||99));
+  grid.innerHTML = members.map(m => {
+    const tags = (m.expertise||'').split(',').map(e=>`<span style="background:#e8f5e9;color:var(--icar-green);font-size:.65rem;padding:2px 6px;border-radius:8px;">${e.trim()}</span>`).join(' ');
+    const photo = m.photo ? `<img src="${m.photo}" alt="${m.name}" onerror="this.parentElement.innerHTML='👨‍🔬'">` : '👨‍🔬';
+    return `<div class="team-card"><div class="tc-photo">${photo}</div><div class="tc-info"><div class="tc-name">${m.name}</div><div class="tc-desig">${m.designation}</div><div class="tc-disc">${m.discipline}</div><div style="margin:6px 0;display:flex;flex-wrap:wrap;gap:4px;">${tags}</div><div class="tc-email"><a href="mailto:${m.email}">${m.email}</a></div></div></div>`;
+  }).join('');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  applySettings();
+  applyHome();
+  applyTeam();
+  // Copy notices for seamless scroll loop
+  const ni = document.getElementById('notice-board');
+  if (ni) ni.innerHTML += ni.innerHTML;
+});
+</script>
+</body>
+</html>

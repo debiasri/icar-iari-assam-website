@@ -1,0 +1,16 @@
+{
+  "stats": [
+    { "value": "587", "label": "Hectares Campus Area" },
+    { "value": "50+", "label": "Research Projects" },
+    { "value": "200+", "label": "Publications" },
+    { "value": "8", "label": "NE States Served" }
+  ],
+  "news": [
+    { "title": "ICAR-Sponsored Winter School Concludes at ICAR-IARI, Assam", "date": "Feb 2025", "href": "#" },
+    { "title": "Dhansiri Residential Complex at ICAR-IARI, Assam Inaugurated", "date": "Jan 2025", "href": "#" },
+    { "title": "Farmer-Scientist Interaction and Input Distribution Programme at Lakhimpur", "date": "Mar 2025", "href": "#" },
+    { "title": "Interphase Meeting cum Brainstorming Session for Promotion of Agriculture", "date": "May 2024", "href": "#" },
+    { "title": "Training on Fish Processing & Value Addition organized at IARI Assam", "date": "Jul 2024", "href": "#" },
+    { "title": "Workshop on Remote Sensing Applications in Crop Monitoring completed", "date": "Feb 2025", "href": "#" }
+  ]
+}
